@@ -5,8 +5,18 @@
 
 
 // NOTE: import utilities and base partials here:
+@import 'utilities/index';
+@import 'base/index';
+
+
+// You can import by folder name or via folder/index , both are correct.
+//If there is an `index.scss` or `_index.scss` file inside of a folder then Sass will 
+// resolve the path for us by just importing the folder name.
+// for eg. @import 'components' or @import 'components/index
+
+//import components partials
+@import 'components/index';
 
 
 
-// import components partials
-@import 'components';
+

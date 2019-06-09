@@ -1,0 +1,23 @@
+// =========================================
+//  Base Styles
+// =========================================
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin-bottom: 1.25em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: $color-primary;
+    text-decoration: none;
+    &:hover {
+        color: $color-secondary;
+    }
+}
