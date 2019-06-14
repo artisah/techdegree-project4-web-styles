@@ -2,7 +2,84 @@
 //  variables
 // =========================================
 
-//Colors
-$color-primary: #fd79a8;
-$color-secondary: #fdcb6e;
+
+// font-stacks
+$font-url--google :  'https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+$font-family--primary: 'Lato', 'Helevtica Neue', Helvetica, Arial,  sans-serif;
+$font-family--secondary: 'Helevtica Neue', Helvetica, Arial,  sans-serif;
+
+// font-weight
+
+$font-weight--thin: 100;
+$font-weight--light: 300;
+$font-weight--medium: 400;
+$font-weight--bold: 700;
+$font-weight--ultra-bold: 900;
+
+
+
+
+// Base Colors
+
+$white: #fff;
+$black: #0b0b0b;
+$grey: #797e83;
+
+$base-gray: #708090;
+// $base-green: #5BDDBB;
+$base-light-grey: #D3D3D3;
+//buttons color
+$base-blue: #7CD9F2; //button default color
+$base-light-green: #77D092; // button success color
+$base-light-red: #DD9190;  // button error color
+$base-orange: #ED7D6D; // button warning color
+$base-purple: #8D74AE;  // button info color
+//grid colors
+$base-light-green: #89DCCE;
+$base-bright-blue: #36A4C3;
+$base-turquoise-blue: #95EBF9;
+$base-mauve: #D9B0EB;
+$base-peacock-green: #92D1A6;
+$base-pink: #F6D2C9;
+$tumbleweed: #E0A589;
+$base-dark-pink: #E8A1AD;
+
+//Color usage
+
+$color-primary: #5BDDBB; //shade of green
+$color-secondary: #6DE2FC; //shade of blue
+
+
+// Text
+
+$base__font-size: 16px;
+$base__line: 24px;
     
+
+// UI  Button colors
+// Map colors
+
+$buttons-colors: (
+    default  : $base-blue,
+    success  : $base-light-green,
+    error    : $base-light-red,
+    warning  : $base-orange,
+    info     : $base-purple
+);
+
+$grid-colors: (
+     12  :  $base-light-green,
+     6   :  $base-bright-blue,
+     4   :  $base-turquoise-blue,
+     3   :  $base-mauve,
+     5   :  $base-peacock-green,
+     7   :  $base-pink,
+     8   :  $tumbleweed,  
+);
+
+//media Query breakpoints
+
+$breakpoint-sm : 1px;
+$breakpoint-md : 767px;
+
+

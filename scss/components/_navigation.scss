@@ -1,0 +1,14 @@
+
+
+.nav {
+    text-align: center;
+    @include mq(medium) {
+        @include flex-display($just-cont: center);
+    }
+}
+    .nav__item {
+        & a {
+            @extend %nav-item;
+        } 
+    } 
+

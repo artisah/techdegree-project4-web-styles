@@ -1,0 +1,42 @@
+
+// Interpolation is useful for injecting values into strings, but other than that it’s rarely necessary in 
+// SassScript expressions. You definitely don’t need it to just use a variable in a property value.
+//  Instead of writing color: #{$accent}, you can just write color: $accent!
+
+// background color mixin
+
+@mixin bg-colors($map) {
+    @each $theme, $color in $map {
+        &--#{$theme}.theme__colors {
+            background-color: $color;
+       }
+    }
+}
+ // FlexBox 
+
+@mixin flex-display($just-cont) {
+    display: flex;
+    justify-content: $just-cont;
+
+}
+
+// Media query mixin
+@mixin mq($break) {
+    @if $break == "small" {
+        @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+            @content;
+        }
+    }
+
+    @else if $break == "medium" {
+        @media (min-width: $breakpoint-md + 1) {
+            @content;
+        } 
+    }
+    
+    @else {
+        @error "No breakpoint values ranges for '#{$break}' breakpoint media query";
+    }
+}
+
+

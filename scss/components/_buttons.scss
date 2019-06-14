@@ -1,0 +1,18 @@
+
+
+// button colors
+.btn {
+    @include bg-colors($buttons-colors);
+}
+
+// buttons base styles
+[class^="btn"]
+{
+  width: 100%;
+  color: $white;
+  height: em(48px);
+  border-radius: em(8px);
+  margin-bottom: em(30px);
+  text-transform: uppercase;
+  padding: em(16px);
+}

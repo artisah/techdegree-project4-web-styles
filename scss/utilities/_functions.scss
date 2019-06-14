@@ -1,0 +1,18 @@
+// Import Google Fonts URL if defined.
+
+@if variable-exists(font-url--google) {
+    @import url($font-url--google);
+}
+
+// calculate em values
+
+@function em($target, $context: $base__font-size) {
+    @return $target/$context * 1em;
+}
+
+// make column width a percentage of the column number / total columns
+
+@function cal-flex-basis($no-of-cols, $total-cols) {
+    @return $no-of-cols / $total-cols * 100%;
+
+}

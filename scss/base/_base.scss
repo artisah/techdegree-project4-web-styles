@@ -3,21 +3,30 @@
 // =========================================
 
 * {
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 p {
-    margin-bottom: 1.25em;
-}
-
-ul {
-    list-style-type: none;
-}
-
-a {
-    color: $color-primary;
+    font-family: $font-family--primary;
+    margin: 20px 0;
+    color: $black;
+    letter-spacing: 0.4px;
+    word-spacing: 0.1em;
+    line-height: ($base__line/$base__font-size);
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+  }
+  
+  a {
+    
     text-decoration: none;
-    &:hover {
-        color: $color-secondary;
-    }
-}
+    color: $base-blue;
+    font-weight: $font-weight--thin;
+    font-size: em(18px);
+  }

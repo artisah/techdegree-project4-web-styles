@@ -6,24 +6,36 @@
 // but additional styling may be needed
 // **********************************************
 
+// main container styles.
+.container {
+  width: 90%;
+  margin: 0 auto;
+  font-family: $font-family--primary;
+  background-color: $white;
+  color: $base-gray;
+  padding: 0 em(36px);
+  line-height: 1.5;
+}
+
 
 // grid base class
 .grid {
 
   // .grid__row
   &__row {
-    padding: 1em 10px;
-    display: flex;
-    flex-direction: column;
-
-    // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: 768px) {
-      flex-direction: row;
+   margin-bottom: em(20px);
+ 
+   // NOTE: replace with media query mixin if aiming for exceeds
+    //@media (min-width: 768px) {
+      @include mq(medium) {
+          @include flex-display($just-cont: space-around); 
     }
   }
 
   // .grid__col
   &__col {
+     // background color for grid using mixin.
+    @include bg-colors($grid-colors);
 
     // create grid columns dynamically
     // loop through each column size
@@ -36,17 +48,24 @@
         // base styles applied to all grid columns 
         // NOTE: could be converted to a placeholder, along with margin
         // from the  media query
-        margin-top: 10px;
-        flex-basis: 100%;
+        
+        width: 100%;
+        border-radius: em(8px);
+        margin-bottom: em(5px);
+        padding: em(12px);
+
+
 
         // NOTE: replace with media query mixin if aiming for exceeds
-        @media (min-width: 768px) {
+       // @media (min-width: 768px) {
+        @include mq(medium) {
 
           // base stlyes applied to all grid columns
           margin-top: 0;
 
           // make column width a percentage of the column number / total columns
-          flex-basis: #{$i / 12 * 100 + "%"} ;
+          //flex-basis: #{$i / 12 * 100 + "%"} ;
+          flex-basis: cal-flex-basis($i, 12);
         }
       }
     }
@@ -59,10 +78,24 @@
   & + & {
 
     // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: 768px) {
+    // @media (min-width: 768px) {
+      @include mq(medium) {
 
       // add grid gutter
       margin-left: 10px;
     }
   }
 }
+/*To display buutns styles in rows : default button, success button etc for medium screen sizes and up..*/
+.grid__col--12 {
+  @include mq(medium) {
+    @include flex-display($just-cont: space-around); 
+
+    button {
+      margin-left: 10px;
+      flex-basis: cal-flex-basis(1, 5);
+    } 
+  }
+}
+
+

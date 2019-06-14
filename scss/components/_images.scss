@@ -1,5 +1,15 @@
-.img--logo {
-    display: block;
-    margin: 0 auto;
-    padding: 1em;
+//  images styles
+
+.img--logo,
+.img--avatar,
+.img--frame{
+  @extend %img;  
 }
+
+.img--frame {
+    @extend %img;
+    width: 100%;
+    border: 1px solid grey;
+    padding: 10px;
+  
+  }

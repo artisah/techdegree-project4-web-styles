@@ -1,0 +1,36 @@
+// Link placeholder
+
+%link {
+    color: $color-secondary;
+    text-decoration: none;
+    &:hover {
+    color: $color-primary;
+   }
+  }
+
+
+
+// Nav items placeholder
+
+%nav-item {
+    display: block;
+    color: inherit;
+    font-size: em(19px);
+    font-weight: $font-weight--medium;
+    margin: em(8px) 0;
+    padding: em(8px) em(16px);
+    text-transform: capitalize;
+    &:hover {
+        background-color: $color-primary;
+        color: $white;
+        border-radius: 8px;
+    } //ends '&:hover' selector
+}
+
+// image placeholder
+
+%img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
